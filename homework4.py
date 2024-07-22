@@ -44,7 +44,7 @@ def get_cats_info(path: str) -> list:
                 cat_id = line[0]
                 cat_name = line[1]
                 cat_age = int(line[2])
-                if cat_age < 0:
+                if cat_age <= 0:
                     print(f"Некоректний вік у рядку: {lines.index(line) + 1}")
                     continue
                 cat_dicts.append({'id': cat_id, 'name': cat_name, 'age': cat_age})
