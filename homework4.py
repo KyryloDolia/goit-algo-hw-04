@@ -18,7 +18,7 @@ def total_salary(path: str) -> tuple:
                     return None
                 salaries.append(salary)
             except (IndexError, ValueError):
-                print(f"Invalid data in line {lines.index(line)+1}")
+                print(f"Некоректні дані в рядку: {lines.index(line)+1}")
                 return None
 
         if not salaries:
@@ -44,7 +44,7 @@ def get_cats_info(path: str) -> list:
             try:
                 cat_dicts.append({'id': line[0], 'name': line[1], 'age': int(line[2])})
             except (IndexError, ValueError):
-                print(f"Невірні дані в рядку: {lines.index(line)+1}")  
+                print(f"Некоректні дані в рядку: {lines.index(line)+1}")  
                 
     return cat_dicts
 
